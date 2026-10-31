@@ -452,3 +452,14 @@ html.theme-anim,html.theme-anim *{transition:background-color .35s ease,border-c
 /* fix: Contact pill text invisible when active */
 nav a.navcta,nav a.navcta.active,nav a.navcta:hover{color:#fff!important}
 nav a.navcta::after{display:none!important}
+
+/* collapsible project details */
+.pmore{margin-top:.75rem;border-top:1px solid rgba(127,127,127,.2);padding-top:.6rem}
+.pmore>summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:.4rem;font-weight:600;font-size:.92rem;color:var(--accent,#2563eb);user-select:none}
+.pmore>summary::-webkit-details-marker{display:none}
+.pmore>summary::after{content:"";width:.5rem;height:.5rem;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform .25s}
+.pmore[open]>summary::after{transform:rotate(-135deg) translateY(-2px)}
+.pmore[open]>summary{margin-bottom:.6rem}
+.pmore[open]>div{animation:pfade .3s ease}
+@keyframes pfade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+.pgrid{align-items:start}

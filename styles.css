@@ -448,3 +448,7 @@ html.theme-anim,html.theme-anim *{transition:background-color .35s ease,border-c
 @keyframes waPing{0%{transform:scale(1);opacity:.45}80%,100%{transform:scale(1.6);opacity:0}}
 @media (max-width:560px){.wa-float{width:52px;height:52px;left:14px;bottom:14px}.wa-tip{display:none}}
 @media (prefers-reduced-motion:reduce){.wa-float::before{animation:none;display:none}}
+
+/* fix: Contact pill text invisible when active */
+nav a.navcta,nav a.navcta.active,nav a.navcta:hover{color:#fff!important}
+nav a.navcta::after{display:none!important}

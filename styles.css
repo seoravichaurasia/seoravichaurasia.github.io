@@ -480,3 +480,13 @@ nav a.navcta::after{display:none!important}
 .pacc .pbody{padding:0 18px 16px;display:flex;flex-direction:column;gap:8px;animation:pfade .3s ease}
 .pacc .pdrop[open]>summary{border-bottom:1px solid var(--line);margin-bottom:10px}
 @media (min-width:760px){.pacc>.pdrop>summary{padding:16px 22px}.pacc .pbody{padding:0 22px 20px}}
+
+/* process dropdown */
+.edrop>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;user-select:none}
+.edrop>summary::-webkit-details-marker{display:none}
+.edrop .etitle{display:flex;flex-direction:column;font-weight:700;font-size:1.1rem;color:var(--brand)}
+.edrop .etitle small{font-weight:500;font-size:.8rem;color:var(--muted);margin-top:2px}
+.edrop .pchev{flex:none;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);position:relative;transition:transform .3s,background .3s}
+.edrop .pchev::after{content:"";position:absolute;left:50%;top:42%;width:7px;height:7px;border-right:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:translate(-50%,-50%) rotate(45deg)}
+.edrop[open] .pchev{transform:rotate(180deg);background:#e2a03f22}
+.edrop[open]>ul{margin-top:12px;animation:pfade .3s ease}

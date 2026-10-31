@@ -490,3 +490,9 @@ nav a.navcta::after{display:none!important}
 .edrop .pchev::after{content:"";position:absolute;left:50%;top:42%;width:7px;height:7px;border-right:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:translate(-50%,-50%) rotate(45deg)}
 .edrop[open] .pchev{transform:rotate(180deg);background:#e2a03f22}
 .edrop[open]>ul{margin-top:12px;animation:pfade .3s ease}
+
+/* all-projects dropdown */
+.pall{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:16px;padding:16px 18px;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.pall[open]>summary{margin-bottom:14px}
+.pall .pallbody{animation:pfade .3s ease}
+.pall .pallbody .pfilter{margin-top:0}

@@ -437,3 +437,14 @@ html.theme-anim,html.theme-anim *{transition:background-color .35s ease,border-c
  .journey{grid-template-columns:1fr;gap:18px;padding-left:28px}
  .journey::before{left:7px;right:auto;top:4px;bottom:4px;width:2px;height:auto;background:linear-gradient(180deg,var(--brand),var(--accent))}
  .journey li{padding-top:0}.journey .jr-dot{left:-28px;top:2px}}
+
+/* floating whatsapp (left) */
+.wa-float{position:fixed;left:18px;bottom:18px;z-index:45;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 24px -8px rgba(37,211,102,.7);transition:transform .2s ease,box-shadow .2s ease}
+.wa-float svg{width:30px;height:30px}
+.wa-float::before{content:"";position:absolute;inset:0;border-radius:50%;background:#25D366;opacity:.45;z-index:-1;animation:waPing 2.4s ease-out infinite}
+.wa-float:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 14px 28px -8px rgba(37,211,102,.85)}
+.wa-tip{position:absolute;left:66px;white-space:nowrap;background:var(--card);color:var(--ink);border:1px solid var(--line);font-size:.85rem;font-weight:600;padding:6px 10px;border-radius:8px;opacity:0;transform:translateX(-6px);pointer-events:none;transition:opacity .2s,transform .2s}
+.wa-float:hover .wa-tip{opacity:1;transform:none}
+@keyframes waPing{0%{transform:scale(1);opacity:.45}80%,100%{transform:scale(1.6);opacity:0}}
+@media (max-width:560px){.wa-float{width:52px;height:52px;left:14px;bottom:14px}.wa-tip{display:none}}
+@media (prefers-reduced-motion:reduce){.wa-float::before{animation:none;display:none}}

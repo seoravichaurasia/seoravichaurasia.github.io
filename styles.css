@@ -463,3 +463,20 @@ nav a.navcta::after{display:none!important}
 .pmore[open]>div{animation:pfade .3s ease}
 @keyframes pfade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
 .pgrid{align-items:start}
+
+/* accordion project rows */
+.pacc{padding:0!important;gap:0}
+.pacc>.pdrop>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;user-select:none}
+.pacc>.pdrop>summary::-webkit-details-marker{display:none}
+.pacc .psum{display:flex;flex-direction:column;gap:2px;min-width:0}
+.pacc .psum .phead{margin:0}
+.pacc .psum .phead h3{font-size:1.05rem}
+.pacc .psum .ptag{margin:0;font-size:.78rem}
+.pacc .plogo{width:40px!important;height:40px!important;min-width:40px}
+.pacc .plogo img{width:100%!important;height:100%!important}
+.pacc .pchev{flex:none;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);position:relative;transition:transform .3s,background .3s}
+.pacc .pchev::after{content:"";position:absolute;left:50%;top:42%;width:7px;height:7px;border-right:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:translate(-50%,-50%) rotate(45deg)}
+.pacc .pdrop[open] .pchev{transform:rotate(180deg);background:#e2a03f22}
+.pacc .pbody{padding:0 18px 16px;display:flex;flex-direction:column;gap:8px;animation:pfade .3s ease}
+.pacc .pdrop[open]>summary{border-bottom:1px solid var(--line);margin-bottom:10px}
+@media (min-width:760px){.pacc>.pdrop>summary{padding:16px 22px}.pacc .pbody{padding:0 22px 20px}}

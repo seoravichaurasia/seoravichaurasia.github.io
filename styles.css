@@ -496,3 +496,17 @@ nav a.navcta::after{display:none!important}
 .pall[open]>summary{margin-bottom:14px}
 .pall .pallbody{animation:pfade .3s ease}
 .pall .pallbody .pfilter{margin-top:0}
+
+/* skills + experience dropdowns */
+.xdrop>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;user-select:none}
+.xdrop>summary::-webkit-details-marker{display:none}
+.xdrop .pchev{flex:none;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);position:relative;transition:transform .3s,background .3s}
+.xdrop .pchev::after{content:"";position:absolute;left:50%;top:42%;width:7px;height:7px;border-right:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:translate(-50%,-50%) rotate(45deg)}
+.xdrop[open] .pchev{transform:rotate(180deg);background:#e2a03f22}
+.xdrop[open]>summary+*{margin-top:12px;animation:pfade .3s ease}
+.xdrop .etitle{display:flex;flex-direction:column;font-weight:700;font-size:1.05rem;color:var(--brand)}
+.xdrop .etitle small{font-weight:500;font-size:.8rem;color:var(--muted);margin-top:2px}
+.skillgrid>.xdrop{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 18px;align-self:start}
+.skillgrid{align-items:start}
+.timeline .xdrop .xhead h3{margin:2px 0 0}
+.timeline .xdrop .xhead .where{margin:2px 0 0}
